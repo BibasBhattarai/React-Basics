@@ -3,10 +3,10 @@ import React from 'react'
 function Card() {
 
   const data=[
-    {image:'https://img.uefa.com/imgml/TP/players/1/2025/324x324/250176450.jpg', name:"lamine yamal", description:"FC barcelona Right winger Player"},
-    {image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKi9LTWTbUmypNJ4XkNs_cZOxmM1lhPsfwyw&s', name:"Pedri", description:"FC barcelona Center Mid player "},
-    {image:'https://www.playmakerstats.com/img/jogadores/new/54/45/1035445_pau_cubarsi_20240914123715.png', name:"Cubarsi", description:"FC barcelona Center back player"},
-    {image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-dEWw-kkreHTJCSYG-t2EvZup8r-oDZBRAg&s', name:"Raphina", description:"FC barcelona left winger player"}
+    {image:'https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lfGVufDB8fDB8fHww', name:"Headphone", description:"Good quality headphones" , instock:false},
+    {image:'https://plus.unsplash.com/premium_photo-1681302427948-2fd0eca629b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFwdG9wfGVufDB8fDB8fHww', name:"Laptop", description:"High performance Laptop ",instock:true},
+    {image:'https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdhdGNofGVufDB8fDB8fHww', name:"Watch", description:"Water Resistance watch", instock:false},
+    {image:'https://images.unsplash.com/photo-1528795259021-d8c86e14354c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1vYmlsZXxlbnwwfHwwfHx8MA%3D%3D', name:"I-phone", description:"I-phone with good quality Camera",instock:true}
   ]
 
 
@@ -20,6 +20,10 @@ function Card() {
         <div className='w-full px-3 py-4'>
           <h2 className='font-semibold'>{elem.name}</h2>
           <p className='text-xs mt-3'>{elem.description}</p>
+          <button className={`px-4 py-1 ${elem.instock ?"bg-blue-600":"bg-red-700"}  text-xs rounded text-zinc-100 mt-3 w-fit` }>
+          {elem.instock ? "Instock":"Out of stock"}
+          </button>
+          
         </div>
       </div>))}
 
